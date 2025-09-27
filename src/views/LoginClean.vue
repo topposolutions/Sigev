@@ -1,72 +1,36 @@
 <template>
   <div class="auth-container">
     <div class="auth-content">
-      <!-- Left side - Hero section with documents image -->
-      <div class="hero-section">
-        <div class="hero-overlay">
-          <div class="brand-section">
-            <div class="brand-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="24" height="24" rx="6" fill="white" />
-                <path
-                  d="M6 9h12M6 12h12M6 15h9"
-                  stroke="#4C6EF5"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                />
-                <circle cx="16.5" cy="7.5" r="4.5" fill="#4C6EF5" />
-                <path
-                  d="m18.75 9.75 1.5 1.5"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </div>
-            <h1 class="brand-title">Sigo</h1>
-          </div>
-
-          <div class="hero-content">
-            <div class="hero-text">
-              <h2 class="hero-title">
-                Sua secretaria no ritmo da eficiência digital!
-              </h2>
-              <p class="hero-subtitle">
-                Simplifique o processo, elimine erros e ganhe tempo
-              </p>
-              <p class="hero-description">
-                Ser a principal solução de confiança para órgãos públicos que
-                buscam modernizar sua gestão sem perder a simplicidade.
-              </p>
-            </div>
-
-            <div class="features-list">
-              <div class="feature-item">
-                <div class="feature-icon">•</div>
-                <span>Mais controle</span>
-              </div>
-              <div class="feature-item">
-                <div class="feature-icon">•</div>
-                <span>Menos Burocracia</span>
-              </div>
-              <div class="feature-item">
-                <div class="feature-icon">•</div>
-                <span>Mais transparência</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- Right side - Auth forms -->
       <div class="auth-section">
         <div class="auth-wrapper">
+          <div class="brand-section">
+             <div class="brand-icon">
+               <svg
+                 width="28"
+                 height="28"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg"
+               >
+                 <rect width="24" height="24" rx="6" fill="white" />
+                 <path
+                   d="M6 9h12M6 12h12M6 15h9"
+                   stroke="#4C6EF5"
+                   stroke-width="1.5"
+                   stroke-linecap="round"
+                 />
+                 <circle cx="16.5" cy="7.5" r="4.5" fill="#4C6EF5" />
+                 <path
+                   d="m18.75 9.75 1.5 1.5"
+                   stroke="white"
+                   stroke-width="1.5"
+                   stroke-linecap="round"
+                 />
+               </svg>
+             </div>
+            <h1 class="brand-title">Sigo</h1>
+          </div>
           <div class="auth-header">
             <h3 class="auth-title">Bem-vindo</h3>
             <p class="auth-subtitle">Faça login na sua conta</p>
@@ -297,8 +261,9 @@ export default {
   border-radius: 0;
   box-shadow: none;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
 }
 
@@ -329,7 +294,7 @@ export default {
 .brand-section {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 60px;
 }
 
@@ -409,24 +374,58 @@ export default {
   color: #60a5fa;
 }
 
+/* Brand Section */
+.brand-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4C6EF5, #3B82F6);
+  box-shadow: 0 4px 12px rgba(76, 110, 245, 0.3);
+}
+
+.brand-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #1f2937;
+  letter-spacing: -0.5px;
+}
+
 /* Auth Section - Right side */
 .auth-section {
-  padding: 80px 60px;
+  padding: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: white;
-  height: 100%;
+  width: 100%;
+  max-width: 500px;
 }
 
 .auth-wrapper {
   width: 100%;
   max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .auth-header {
-  text-align: left;
-  margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 32px;
+  width: 100%;
 }
 
 .auth-title {
@@ -450,6 +449,7 @@ export default {
   flex-direction: column;
   gap: 24px;
   margin-bottom: 32px;
+  width: 100%;
 }
 
 .form-group {
@@ -523,6 +523,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
+  width: 100%;
 }
 
 .checkbox-wrapper {
@@ -593,6 +594,7 @@ export default {
   justify-content: center;
   gap: 8px;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 .auth-submit-btn:hover {
@@ -626,9 +628,10 @@ export default {
 .divider {
   position: relative;
   text-align: center;
-  margin: 32px 0 24px 0;
+  margin: 32px auto 24px auto;
   color: #9ca3af;
   font-size: 14px;
+  width: 100%;
 }
 
 .divider::before {
@@ -654,6 +657,7 @@ export default {
   grid-template-columns: 1fr 1fr;
   gap: 12px;
   margin-bottom: 32px;
+  width: 100%;
 }
 
 .social-btn {
@@ -683,6 +687,7 @@ export default {
   margin-bottom: 24px;
   color: #6b7280;
   font-size: 14px;
+  width: 100%;
 }
 
 .toggle-link {
@@ -701,6 +706,7 @@ export default {
   font-size: 12px;
   color: #9ca3af;
   line-height: 1.4;
+  width: 100%;
 }
 
 .terms-link {
@@ -754,7 +760,21 @@ export default {
   }
 
   .auth-section {
-    padding: 40px 24px;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .brand-section {
+    margin-bottom: 32px;
+  }
+
+  .brand-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-title {
+    font-size: 24px;
   }
 
   .auth-title {
