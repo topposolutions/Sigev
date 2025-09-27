@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR" dir="ltr">
+  <head>
+    <!-- Meta Tags Essenciais -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- SEO e Ranqueamento -->
+    <title>Ceos - Plataforma Inteligente de Consulta de Documentos | SaaS Corporativo</title>
+    <meta name="description" content="Plataforma SaaS avançada para consulta rápida e inteligente de documentos corporativos. IA, busca semântica e análise de documentos em tempo real." />
+    <meta name="keywords" content="documentos corporativos, consulta inteligente, SaaS, IA, busca semântica, análise de documentos, plataforma empresarial" />
+    <meta name="author" content="Ceos" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ceos.com.br/" />
+    <meta property="og:title" content="Ceos - Plataforma Inteligente de Consulta de Documentos" />
+    <meta property="og:description" content="Plataforma SaaS avançada para consulta rápida e inteligente de documentos corporativos com IA e busca semântica." />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Ceos" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ceos.com.br/" />
+    <meta property="twitter:title" content="Ceos - Plataforma Inteligente de Consulta de Documentos" />
+    <meta property="twitter:description" content="Plataforma SaaS avançada para consulta rápida e inteligente de documentos corporativos com IA e busca semântica." />
+    <meta property="twitter:image" content="/og-image.jpg" />
+    
+    <!-- Favicon e Ícones -->
+    <link rel="icon" href="/Logo.ico" />
+    <link rel="shortcut icon" href="/Logo.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#ffffff" />
+    
+    <!-- Preconnect para Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- DNS Prefetch para APIs externas -->
+    <link rel="dns-prefetch" href="//74.163.241.140" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ceos.com.br/" />
+    
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Ceos",
+      "description": "Plataforma SaaS avançada para consulta rápida e inteligente de documentos corporativos",
+      "url": "https://ceos.com.br",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BRL"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ceos",
+        "url": "https://ceos.com.br"
+      }
+    }
+    </script>
+    
+    <!-- Segurança -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://74.163.241.140:8000;" /> -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    
+    <!-- Performance e Cache -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+  </head>
+  <body>
+    <!-- Loading State -->
+    <div id="loading" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; display: flex; justify-content: center; align-items: center; z-index: 9999;">
+      <div style="text-align: center;">
+        <img src="/Logo.ico" alt="Ceos" style="width: 64px; height: 64px; margin-bottom: 16px;" />
+        <p style="color: #666; font-family: Arial, sans-serif;">Carregando Ceos...</p>
+      </div>
+    </div>
+    
+    <!-- App Container -->
+    <div id="app" style="display: none;"></div>
+    
+    <!-- Scripts -->
+    <script type="module" src="/src/main.ts"></script>
+    
+    <!-- Performance Monitoring -->
+    <script>
+      // Remove loading screen when app is ready
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loading = document.getElementById('loading');
+          const app = document.getElementById('app');
+          if (loading && app) {
+            loading.style.display = 'none';
+            app.style.display = 'block';
+          }
+        }, 500);
+      });
+      
+      // Performance monitoring
+      window.addEventListener('load', function() {
+        if ('performance' in window) {
+          const perfData = performance.getEntriesByType('navigation')[0];
+          console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+        }
+      });
+    </script>
+  </body>
+</html>
