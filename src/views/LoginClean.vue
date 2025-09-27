@@ -91,9 +91,10 @@
             </button>
           </form>
 
-          <div class="divider">
+          <!--  <div class="divider">
             <span>ou continue com</span>
           </div>
+           -->
 
           <!-- Social login buttons -->
 
