@@ -218,6 +218,31 @@ export default {
   methods: {
     async login() {
       if (!this.enabledAccess) return;
+
+      // Login mocado com setTimeout
+      this.pending = true;
+      
+      setTimeout(() => {
+        this.pending = false;
+        
+        // Verificar credenciais mocado
+        if (this.form.email === 'admin@gmail.com' && this.form.password === 'admin') {
+          this.$router.push('/');
+        } else {
+          // Mostrar erro de credenciais inválidas
+          Swal.fire({
+            title: "Erro de Login",
+            text: "Email ou senha incorretos",
+            icon: "error",
+            confirmButtonColor: "#3367d6",
+            customClass: {
+              icon: "swal2-custom-icon",
+            },
+          });
+        }
+      }, 2000);
+      
+      /*
       htmlClassStore.startLoading();
       this.pending = true;
       const authStore = useAuthStore();
@@ -246,6 +271,7 @@ export default {
       } finally {
         htmlClassStore.stopLoading();
       }
+      */
     },
   },
 };

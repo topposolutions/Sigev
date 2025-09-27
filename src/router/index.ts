@@ -12,126 +12,23 @@ const routes = [
     component: () => import("../views/Login.vue"),
     meta: {
       requiresAuth: false,
-      middleware: [redirectIfAuthenticated],
+     // middleware: [redirectIfAuthenticated],
     },
   },
- 
-  
 
   {
     path: "/",
-    redirect: "/chat",
+    name: "home",  //redirect
     // @ts-ignore
     component: () => import("../layout/index.vue"),
-    meta: { requiresAuth: true, middleware: checkAuth },
+    //meta: { requiresAuth: true, middleware: checkAuth },
     children: [
       {
         path: "/upload",
         name: "Upload",
         // @ts-ignore
         component: () => import("../views/upload/Upload.vue"),
-         meta: { requiresAuth: true, middleware: checkAuth },
-      },
-      {
-        path: "chat",
-        name: "Chat",
-        // @ts-ignore
-        component: () => import("../views/chat/index.vue"),
-        meta: { requiresAuth: true, middleware: checkAuth },
-      },
-      {
-        path: "chat/:id",
-        name: "ChatWithId",
-        // @ts-ignore
-        component: () => import("../views/chat/index.vue"),
-        meta: { requiresAuth: true, middleware: checkAuth },
-      },
-      {
-        path: "dashboard",
-        name: "Dashboard",
-        // @ts-ignore
-        component: () => import("../views/Dashboard.vue"),
-        meta: { requiresAuth: true, middleware: checkAuth },
-      },
-      {
-        path: "documents",
-        name: "Documents",
-        // @ts-ignore
-        component: () => import("../views/Documents/List.vue"),
-        meta: { requiresAuth: true, middleware: checkAuth },
-      },
-      {
-        path: "/documents/upload",
-        name: "DocumentUpload",
-        // @ts-ignore
-        component: () => import("../views/upload/Upload.vue"),
-        meta: { requiresAuth: true, middleware: checkAuth },
-      },
-      {
-        path: "search",
-        name: "Search",
-        // @ts-ignore
-        component: () => import("../views/Search.vue"),
-        meta: { requiresAuth: true, middleware: checkAuth },
-      },
-      
-      {
-        path: "analytics",
-        name: "Analytics",
-        // @ts-ignore
-        component: () => import("../views/Analytics.vue"),
-        meta: { requiresAuth: true, middleware: checkAuth },
-      },
-      {
-        path: "settings",
-        name: "Settings",
-        // @ts-ignore
-        component: () => import("../views/Settings.vue"),
-        meta: { requiresAuth: true, middleware: checkAuth },
-      },
-       
-      {
-        path: "profile",
-        name: "Profile",
-        // @ts-ignore
-        component: () => import("../views/Profile.vue"),
-        meta: { requiresAuth: true, middleware: checkAuth },
-      },
-      /*
-      {
-        path: "document-upload",
-        name: "DocumentUpload",
-        // @ts-ignore
-        component: () => import("../views/DocumentUpload.vue"),
-      },
-      {
-        path: "document-details/:id",
-        name: "DocumentDetails",
-        // @ts-ignore
-        component: () => import("../views/DocumentDetails.vue"),
-        
-      },
-      {
-        path: "notification-center",
-        name: "NotificationCenter",
-        // @ts-ignore
-        component: () => import("../views/NotificationCenter.vue"),
-      
-      },
-      {
-        path: "notification-config",
-        name: "NotificationConfig",
-        // @ts-ignore
-        component: () => import("../views/NotificationConfig.vue"),
-        
-      },
-      
-      */
-      {
-        path: "reports",
-        name: "Reports",
-        // @ts-ignore
-        component: () => import("../views/Documents/List.vue"),
+        //meta: { requiresAuth: true, middleware: checkAuth },
       },
     ],
   },
