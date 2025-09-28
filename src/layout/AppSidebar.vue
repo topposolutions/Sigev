@@ -28,7 +28,7 @@
           </svg>
         </div>
         <div v-if="!isCollapsed" class="brand-text">
-          <h1 class="brand-title">Ceos</h1>
+          <h1 class="brand-title">Sigo</h1>
           <p class="brand-subtitle">Documentos Inteligentes</p>
         </div>
       </div>

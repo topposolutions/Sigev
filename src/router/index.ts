@@ -17,17 +17,6 @@ const routes = [
   },
 
   {
-    path: "/login-no-image",
-    name: "login-no-image",
-    // @ts-ignore
-    component: () => import("../views/LoginClean.vue"),
-    meta: {
-      requiresAuth: false,
-     // middleware: [redirectIfAuthenticated],
-    },
-  },
-
-  {
     path: "/",
     name: "home",  //redirect
     // @ts-ignore
