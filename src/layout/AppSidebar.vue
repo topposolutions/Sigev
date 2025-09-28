@@ -29,7 +29,7 @@
         </div>
         <div v-if="!isCollapsed" class="brand-text">
           <h1 class="brand-title">Sigo</h1>
-          <p class="brand-subtitle">Documentos Inteligentes</p>
+          <p class="brand-subtitle">Gestão de Despesas de Viagem</p>
         </div>
       </div>
 
